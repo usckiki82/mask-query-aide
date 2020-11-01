@@ -1,17 +1,21 @@
-# Project Name
-Overview that explains **what** this project is about.
+Mask-Query-Aide
+===============
+*  [Christy Madden](mailto:christine.m.madden19@gmail.com)
+*  This project trains an ML model to recognize people and predict whether they have a mask on or not.
 
-## Installation/Build Instructions
-If appropriate, explain **how** to install/build this project.
 
-## References
-* Links to where the reference documents live, including API reference docs.
-* Links to important things like the JIRA project associated with this git project.
+Installation/Build Instructions
+===============================
+*  None special
 
-## Release History
-If appropriate, describe the revision history.
+References
+==========
+* None
 
-## Contributing
+Contributing
+============
+
+Using following format to create new features for this project:
 
 ```
 $ git clone <ENTER SSH HERE>

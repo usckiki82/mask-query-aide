@@ -5,21 +5,21 @@ from distutils.core import setup
 
 # TEMPLATE
 setup(
-    name='python-template',
+    name='mask-query-aide',
     version='0.0',
-    description='',
+    description='python code to train ML for detecting people with masks',
     long_description=open('README.rst').read(),
     author='Christine Madden',
     license=open('LICENSE').read(),
     author_email='',
-    packages=['project_name'],
+    packages=['mask_query_aide'],
     install_requires=[
         # list other required packages
     ],
     entry_points={
         'console_scripts':
         [
-            'project_name = project_name.__main__:main',
+            'mask_query_aide = mask_query_aide.__main__:main',
         ]
     }
 )
