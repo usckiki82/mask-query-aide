@@ -6,7 +6,9 @@ Mask-Query-Aide
 
 Installation/Build Instructions
 ===============================
-*  None special
+*  Install OpenCV for your system from:
+
+`https://docs.opencv.org/master/da/df6/tutorial_py_table_of_contents_setup.html`
 
 References
 ==========

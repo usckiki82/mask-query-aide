@@ -14,7 +14,11 @@ setup(
     author_email='',
     packages=['mask_query_aide'],
     install_requires=[
-        # list other required packages
+        "numpy",
+        "pandas",
+        "matplotlib",
+        "opencv-python",
+
     ],
     entry_points={
         'console_scripts':
