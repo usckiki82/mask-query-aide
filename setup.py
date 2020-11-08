@@ -11,14 +11,19 @@ setup(
     long_description=open('README.rst').read(),
     author='Christine Madden',
     license=open('LICENSE').read(),
-    author_email='',
+    author_email='christine.m.madden19@gmail.com',
     packages=['mask_query_aide'],
     install_requires=[
-        "numpy",
+        "numpy==1.16.1",
         "pandas",
         "matplotlib",
         "opencv-python",
-
+        "imageai",
+        "keras==2.2.4",
+        "tensorflow==1.13.1",
+        "tensorflow-gpu",
+        "jupyter",
+        "requests",
     ],
     entry_points={
         'console_scripts':
