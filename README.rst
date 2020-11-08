@@ -1,14 +1,14 @@
 Mask-Query-Aide
 ===============
 *  [Christy Madden](mailto:christine.m.madden19@gmail.com)
-*  This project trains an ML model to recognize people and predict whether they have a mask on or not.
+*  This project trains an ML model to recognize people and predict whether they have a mask on or not
+*  Also, learned some things about docker images so see `project-notes.rst`
 
 
 Installation/Build Instructions
 ===============================
-*  Install OpenCV for your system from:
+*  None
 
-`https://docs.opencv.org/master/da/df6/tutorial_py_table_of_contents_setup.html`
 
 References
 ==========
