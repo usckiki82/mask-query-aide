@@ -22,5 +22,6 @@ Project Notes & Documentation
     - Then I followed the tutorial in this URL to learn the basics:
 
         `https://realpython.com/python-versions-docker/`
+        `https://u.group/thinking/how-to-put-jupyter-notebooks-in-a-dockerfile/`
 
 * (TODO) Add pylinting etc setup
