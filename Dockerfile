@@ -1,11 +1,14 @@
-FROM ubuntu
+FROM tensorflow/tensorflow
+#FROM ubuntu
 #FROM python:3.7.9
-RUN apt-get update && apt-get -y update && apt-get install -y build-essential
 
 # CHOOSE WHETHER TO WORK ON VERSION LOCALLY OR IN CONTAINER
 WORKDIR /usr/src
+# WORKDIR /usr/src/app_copy
+EXPOSE 8887
 
 # Method getting python version from hosted repository
+#RUN apt-get update && apt-get -y update && apt-get install -y build-essential
 # RUN apt-get install -y software-properties-common
 # RUN add-apt-repository ppa:deadsnakes/ppa
 # RUN apt-get install -y python3.7 python3.7-venv python3.7-doc binutils
@@ -13,20 +16,18 @@ WORKDIR /usr/src
 #RUN ln -sf /usr/bin/python3.7 /usr/local/bin/python
 #RUN ln -sf /usr/bin/pip3 /usr/local/bin/pip
 
-# Method building pyhon from source code, but takes much longer
-RUN apt-get install -y make wget zlib1g-dev libssl-dev openssl libffi-dev
-RUN wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
-RUN tar xzf Python-3.7.9.tgz
-RUN rm -rf Python-3.7.9.tgz
-WORKDIR /usr/src/Python-3.7.9
-RUN ./configure --enable-optimizations
-RUN make
-RUN make install
+# Method building python from source code, but takes much longer
+#RUN apt-get update && apt-get -y update && apt-get install -y build-essential
+#RUN apt-get install -y make wget zlib1g-dev libssl-dev openssl libffi-dev libsqlite3-dev
+#RUN wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
+#RUN tar xzf Python-3.7.9.tgz
+#RUN rm -rf Python-3.7.9.tgz
+#WORKDIR /usr/src/Python-3.7.9
+#RUN ./configure --enable-optimizations
+#RUN make
+#RUN make install
 
-#RUN apt-get install -y cowsay
-
-WORKDIR /usr/src/app
-# EXPOSE 8887
+RUN apt install -y libgl1-mesa-glx libsm6 libxext6 libxrender-dev
 
 # Set up and activate virtual environment
 #ENV VIRTUAL_ENV "/venv"
@@ -35,9 +36,9 @@ WORKDIR /usr/src/app
 
 # Python commands run inside the virtual environment
 COPY . /usr/src/app_copy
-RUN /usr/local/bin/python3.7 -m pip install --upgrade pip setuptools wheel
-RUN pip3 install --upgrade setuptools pip
-#RUN cd /usr/src/app_copy && pip3.7 install .
+#RUN /usr/local/bin/python3.7 -m pip install --upgrade pip setuptools wheel
+RUN pip install --upgrade setuptools pip wheel
+RUN cd /usr/src/app_copy && pip install .
 
 #COPY ./mask_query_aide/headlines.py .
 #CMD ["python", "headlines.py"]
@@ -51,4 +52,5 @@ RUN pip3 install --upgrade setuptools pip
 
 # Run the Jupyter Notebook
 # $ jupyter notebook --port=8887 --no-browser --ip=0.0.0.0 --allow-root
-#CMD ["jupyter", "notebook", "--port=8887", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+ #CMD ["jupyter", "notebook", "--port=8887", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+ CMD ["jupyter", "lab", "--port=8887", "--no-browser", "--ip=0.0.0.0", "--allow-root"]

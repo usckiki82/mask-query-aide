@@ -19,17 +19,21 @@ clean:
 	rm -rf .venv
 	rm -rf *.egg-info
 
-dock-build:
-	#docker-compose up --build
+dock-build-custom:
 	docker build -t mask-query-aide .
 
-dock-run:
-	#docker-compose up
-	# --rm cleans up container after use
-	# -it runs the container in interactive mode
-	# run with current directory as a volume
-	# docker run --rm -v ${PWD}:/app mask-query-aide python /app/mask_query_aide/headlines.py
-	docker run -p 8888:8888 -it --rm -v ${PWD}:/usr/src/app mask-query-aide
+dock-run-custom:
+	docker run -p 8887:8887 -it --rm -v ${PWD}:/usr/src/app mask-query-aide
+
+dock-pull-tf:
+	docker pull tensorflow/tensorflow:latest-gpu-jupyter
+
+dock-run-tf:
+	#docker run -p 8888:8888 -it --rm -v ${PWD}:/usr/src/app tensorflow/tensorflow:latest-gpu-jupyter
+	#docker run -it --rm -v ${PWD}:/usr/src/app tensorflow/tensorflow:latest-gpu-jupyter
+	#docker run -it -p 8888:8888  --rm -v ${PWD}:/tmp -w /tmp tensorflow/tensorflow:latest-gpu-jupyter
+	docker run -it -p 8888:8888  --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 --rm -v ${PWD}:/tmp -w /tmp tensorflow/tensorflow:latest-gpu-jupyter
+
 
 dock-check:
 	docker ps
