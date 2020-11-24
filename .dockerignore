@@ -1,0 +1,8 @@
+*.egg-info
+**/__pycache__
+**/.DS_Store
+.git
+.venv
+**/.ipynb_checkpoints
+**/output
+**/data

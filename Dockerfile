@@ -3,7 +3,7 @@ FROM tensorflow/tensorflow
 #FROM python:3.7.9
 
 # CHOOSE WHETHER TO WORK ON VERSION LOCALLY OR IN CONTAINER
-WORKDIR /usr/src
+WORKDIR /usr/src/app
 # WORKDIR /usr/src/app_copy
 EXPOSE 8887
 
@@ -38,7 +38,7 @@ RUN apt install -y libgl1-mesa-glx libsm6 libxext6 libxrender-dev
 COPY . /usr/src/app_copy
 #RUN /usr/local/bin/python3.7 -m pip install --upgrade pip setuptools wheel
 RUN pip install --upgrade setuptools pip wheel
-RUN cd /usr/src/app_copy && pip install .
+RUN cd /usr/src/app_copy && pip install  --no-cache-dir .
 
 #COPY ./mask_query_aide/headlines.py .
 #CMD ["python", "headlines.py"]
