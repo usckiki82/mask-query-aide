@@ -53,4 +53,4 @@ RUN cd /usr/src/app_copy && pip install  --no-cache-dir .
 # Run the Jupyter Notebook
 # $ jupyter notebook --port=8887 --no-browser --ip=0.0.0.0 --allow-root
  #CMD ["jupyter", "notebook", "--port=8887", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
- CMD ["jupyter", "lab", "--port=8887", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+ CMD ["jupyter", "lab", "--port=8887", "--no-browser", "--ip=0.0.0.0"]
