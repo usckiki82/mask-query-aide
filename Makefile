@@ -34,6 +34,5 @@ dock-run-tf:
 	#docker run -it -p 8888:8888  --rm -v ${PWD}:/tmp -w /tmp tensorflow/tensorflow:latest-gpu-jupyter
 	docker run -it -p 8888:8888 --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 --rm -v ${PWD}:/tmp -w /tmp tensorflow/tensorflow:latest-gpu-jupyter
 
-
 dock-check:
 	docker ps
