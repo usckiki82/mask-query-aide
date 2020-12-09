@@ -1,6 +1,6 @@
 Mask-Query-Aide
 ===============
-*  [Christy Madden](mailto:christine.m.madden19@gmail.com)
+*  Author: Christy Madden (mailto:christine.m.madden19@gmail.com)
 *  This project trains an ML model to recognize people and predict whether they have a mask on or not
 *  Utilized this project to learn some things about docker images so see `project-notes.rst`
 *  My first project with setting up a Git LFS repo since ipynb files were getting large!
@@ -19,16 +19,20 @@ Installation Instructions
 
 Make File Instructions
 ======================
-*  Since the python tensoflow package requires specific versions of Python, this projects chooses to run code in a docker container rather than modify the existing machine
+*  Since the python tensorflow package requires specific versions of Python, this projects chooses to run code in a docker container rather than modify the existing machine
 *  Below is a list of make file commands, which also includes commands to run the docker container
 
 | Makefile command      | description                                      |
 | ----------------------|--------------------------------------------------|
-| `build`               | Run `docker-compose up --build` for analysis-engine |
-| `start`               | Run `docker-compose up` for analysis-engine      |
-| `getpkg`              | Pull latest analysis-engine container release image from the Github package registry.|
-| `debugshell`          | Dumps you into a bash shell within the analysis-engine container.|
-| `clean`               | Essentially just echoes reminder cmdline for removing old/dangling Docker images (doesn't run it directly for safety).|
+| `install`             | Installs this repo as python package |
+| `develop`             | Installs this repo as python package in develop mode|
+| `venv`                | Creates a venv in `.venv` directory|
+| `dock-build-custom`   | Build the custom docker from the Dockerfile|
+| `dock-run-custom`     | Runs the custom docker which ends in an open jupyter lab session|
+| `dock-pull-tf`        | Pulls down latest tensorflow docker image (unmodified)|
+| `dock-run-tf`         | Runs the latest tensorflow docker image (unmodified)|
+| `dock-check`         | Checks docker status ( ps command )|
+| `clean`               | Cleans the venv|
 
 References
 ==========
