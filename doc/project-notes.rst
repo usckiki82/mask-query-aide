@@ -24,4 +24,7 @@ Project Notes & Documentation
         `https://realpython.com/python-versions-docker/`
         `https://u.group/thinking/how-to-put-jupyter-notebooks-in-a-dockerfile/`
 
+*  Migrated repo over to Git LFS for larger file management (ipynb larger) and also had to clean repo using `filter-branch` as outlined here `https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository`
+
+* Learned to use `labelImg` to annotate photos `https://github.com/tzutalin/labelImg
 * (TODO) Add pylinting etc setup
