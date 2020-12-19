@@ -15,11 +15,11 @@ setup(
     packages=['mask_query_aide'],
     # python_requires="<3.8",
     install_requires=[
-        "numpy==1.16.1",
+        "numpy==1.16.1",  # upgrade this?
         "pandas",
         "matplotlib",
         "opencv-python<=4.1.2.30",
-        "keras==2.2.4",
+        "keras==2.3",  # 2.2.4
         "tensorflow<2.0",
         "tensorflow-gpu<2.0",
         "imageai",

@@ -24,7 +24,14 @@ Project Notes & Documentation
         `https://realpython.com/python-versions-docker/`
         `https://u.group/thinking/how-to-put-jupyter-notebooks-in-a-dockerfile/`
 
+    - Later, Jupyter notebook kept crashing and looked like it would take > 24hrs to train so tried to incorporate GPU
+
+        `https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker`
+
 *  Migrated repo over to Git LFS for larger file management (ipynb larger) and also had to clean repo using `filter-branch` as outlined here `https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository`
 
 * Learned to use `labelImg` to annotate photos `https://github.com/tzutalin/labelImg
+
+* (TODO) Convert code to using GPU enabled tensor flow : https://www.tensorflow.org/install/gpu
+
 * (TODO) Add pylinting etc setup
